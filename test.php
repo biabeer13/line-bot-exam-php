@@ -8,19 +8,9 @@
 
 	$replyToken = $deCode['events'][0]['replyToken'];
 
- 	if(isset($deCode['events'][0]['source']['userId']){
-   		$id = $deCode['events'][0]['source']['userId'];
-  	}
-  	else if(isset($deCode['events'][0]['source']['groupId'])){
-    		$id = $deCode['events'][0]['source']['groupId'];
-  	}
- 	else if(isset($deCode['events'][0]['source']['room'])){
-  		$id = $deCode['events'][0]['source']['room'];
-   	}
-
 	$messages = [];
 	$messages['replyToken'] = $replyToken;
-	$messages['messages'][0] = $id;
+	$messages['messages'][0] = $deCode['events'][0]['source']['userId'];
 
 	$encodeJson = json_encode($messages);
 
