@@ -9,7 +9,8 @@
  
 // I put constants like 'LINE_CHANNEL_ID' here 
 //require_once __DIR__ . '/../includes/config.php';
-require_once __DIR__ . "/../includes/line-bot-sdk/vendor/autoload.php";
+require_once "vendor/autoload.php";
+require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
  
 use LINE\LINEBot;
 use LINE\LINEBot\HTTPClient\GuzzleHTTPClient;
