@@ -10,7 +10,7 @@
 
 	$messages = [];
 	$messages['replyToken'] = $replyToken;
-	$messages['messages'][0] = $deCode['events'][0]['source']['userId'];
+	$messages['messages'][0] = getFormatTextMessage($deCode['events'][0]['source']['userId']);
 
 	$encodeJson = json_encode($messages);
 
