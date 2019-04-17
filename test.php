@@ -8,16 +8,15 @@
 
 	$replyToken = $deCode['events'][0]['replyToken'];
 
-	//รับ id ว่ามาจากไหน
- 	 if(isset($deCode['events'][0]['source']['userId']){
-   	 	$id = $deCode['events'][0]['source']['userId'];
-  	 }
-  	 else if(isset($deCode['events'][0]['source']['groupId'])){
-    	 	$id = $deCode['events'][0]['source']['groupId'];
-  	 }
- 	 else if(isset($deCode['events'][0]['source']['room'])){
-  	 	$id = $deCode['events'][0]['source']['room'];
-   	 }
+ 	if(isset($deCode['events'][0]['source']['userId']){
+   		$id = $deCode['events'][0]['source']['userId'];
+  	}
+  	else if(isset($deCode['events'][0]['source']['groupId'])){
+    		$id = $deCode['events'][0]['source']['groupId'];
+  	}
+ 	else if(isset($deCode['events'][0]['source']['room'])){
+  		$id = $deCode['events'][0]['source']['room'];
+   	}
 
 	$messages = [];
 	$messages['replyToken'] = $replyToken;
